@@ -12,10 +12,10 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   final List<BottomNavigationBarItem> bottomTabs = [
     BottomNavigationBarItem(
-        icon: Icon(CupertinoIcons.conversation_bubble), title: Text("聊天")),
-    BottomNavigationBarItem(icon: Icon(CupertinoIcons.add), title: Text("好友")),
+        icon: Icon(Icons.message), title: Text("聊天")),
+    BottomNavigationBarItem(icon: Icon(Icons.person), title: Text("好友")),
     BottomNavigationBarItem(
-        icon: Icon(Icons.person), title: Text("我的")),
+        icon: Icon(Icons.person_pin), title: Text("我的")),
   ];
 
   final List pages = [HomePage(), CategoryPage(), MyPage()];
