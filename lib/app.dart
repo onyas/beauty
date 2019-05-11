@@ -40,14 +40,14 @@ class _AppState extends State<App> {
                   height: 32.0,
                   child: Icon(
                     icon,
-                    color: Colors.green,
+                    color: Colors.white,
                   ),
                 ),
           Container(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
               title,
-              style: TextStyle(color: Colors.green),
+              style: TextStyle(color: Colors.white),
             ),
           )
         ],

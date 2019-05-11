@@ -13,7 +13,10 @@ class BeautyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Beauty',
         home: new LoadingPage(),
-        theme: ThemeData(primaryColor: Colors.pink),
+        theme: ThemeData(
+            primaryColor: Colors.pink,
+            scaffoldBackgroundColor: Color(0xfffebebeb),
+            cardColor: Colors.pink),
         routes: <String, WidgetBuilder>{
           "app": (BuildContext context) => new App(),
           "search": (BuildContext context) => new Search(),
