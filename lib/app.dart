@@ -1,7 +1,7 @@
+import 'package:beauty/chat/message_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:beauty/category/category.dart';
-import 'package:beauty/home/home.dart';
 import 'package:beauty/my/my.dart';
 
 class App extends StatefulWidget {
@@ -11,14 +11,12 @@ class App extends StatefulWidget {
 
 class _AppState extends State<App> {
   final List<BottomNavigationBarItem> bottomTabs = [
-    BottomNavigationBarItem(
-        icon: Icon(Icons.message), title: Text("聊天")),
+    BottomNavigationBarItem(icon: Icon(Icons.message), title: Text("聊天")),
     BottomNavigationBarItem(icon: Icon(Icons.person), title: Text("好友")),
-    BottomNavigationBarItem(
-        icon: Icon(Icons.person_pin), title: Text("我的")),
+    BottomNavigationBarItem(icon: Icon(Icons.person_pin), title: Text("我的")),
   ];
 
-  final List pages = [HomePage(), CategoryPage(), MyPage()];
+  final List pages = [MessagePage(), CategoryPage(), MyPage()];
 
   int currentIndex = 0;
   var currentPage;
