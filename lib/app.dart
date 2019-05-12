@@ -1,7 +1,7 @@
 import 'package:beauty/chat/message_page.dart';
+import 'package:beauty/contact/contact.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:beauty/category/category.dart';
 import 'package:beauty/my/my.dart';
 
 class App extends StatefulWidget {
@@ -16,7 +16,7 @@ class _AppState extends State<App> {
     BottomNavigationBarItem(icon: Icon(Icons.person_pin), title: Text("我的")),
   ];
 
-  final List pages = [MessagePage(), CategoryPage(), MyPage()];
+  final List pages = [MessagePage(), Contact(), MyPage()];
 
   int currentIndex = 0;
   var currentPage;
