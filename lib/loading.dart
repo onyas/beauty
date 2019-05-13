@@ -20,9 +20,11 @@ class _LoadingPageState extends State<LoadingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Center(
+    return new Container(
       child: Stack(
-        children: <Widget>[Image.asset("images/loading.jpeg", fit: BoxFit.fill)],
+        children: <Widget>[
+          Image.asset("images/loading.jpeg", fit: BoxFit.fill)
+        ],
       ),
     );
   }

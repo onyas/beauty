@@ -15,7 +15,24 @@ class _MessagePageState extends State<MessagePage> {
       body: ListView.builder(
         itemCount: messageData.length,
         itemBuilder: (BuildContext context, int index) {
-          return new MessageItem(messageData[index]);
+          final item = messageData[index];
+          return new Dismissible(
+              key: new Key(item.avatar),
+              onDismissed: (direction) {
+                messageData.removeAt(index);
+                Scaffold.of(context).showSnackBar(
+                    new SnackBar(content: new Text("$item dismissed")));
+              },
+              background: new Container(
+                color: Colors.red,
+                padding:
+                    new EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
+                child: new Text(
+                  '删除',
+                  textDirection: TextDirection.rtl,
+                ),
+              ),
+              child: new MessageItem(messageData[index]));
         },
       ),
     );
